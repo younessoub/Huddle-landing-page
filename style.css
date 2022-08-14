@@ -1,0 +1,158 @@
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+*/
+
+:root{
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: url('./images/bg-desktop.svg');
+  background-color: var(--violet);
+}
+
+header{
+  padding: 40px;
+}
+
+.logo{
+  width: 200px;
+}
+
+.mainWrapper{
+  margin: 50px ;
+  display: flex;
+}
+
+.mainWrapper img{
+  max-width: 70%;
+  height: auto;
+}
+
+.text{
+  padding-left: 40px;
+  padding-top: 50px;
+  color: white;
+}
+
+.text h1{
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.text p{
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.text button{
+  font-family: 'Open Sans', sans-serif;
+  height: 40px;
+  border-radius: 50px;
+  width: 160px;
+  border: none;
+  background-color: white;
+  color: var(--violet);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text button:hover{
+  background-color: var(--softMagenta);
+  color: white;
+}
+
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 70px;
+}
+
+.icons i{
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform .1s ;
+}
+
+.icons i:hover{
+  color: var(--softMagenta);
+  transform: scale(1.2);
+}
+
+@media screen and (max-width:800px){
+  .mainWrapper{
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .mainWrapper img{
+    max-width: 100%;
+  }
+
+  .text{
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .icons{
+    justify-content: center;
+    padding-right: 0;
+
+  }
+}
+
+.attribution { 
+  margin-top:50px;
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
